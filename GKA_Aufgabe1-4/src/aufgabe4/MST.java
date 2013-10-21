@@ -63,7 +63,7 @@ public class MST {
 		WeightedMultigraph<String, DefaultWeightedEdge> minimalesGeruest = new WeightedMultigraph<String, DefaultWeightedEdge>(DefaultWeightedEdge.class);
 		KruskalMinimumSpanningTree<String, DefaultWeightedEdge> krus = new KruskalMinimumSpanningTree<>(graph);
 		
-		
+	
 		for (DefaultWeightedEdge e : krus.getEdgeSet()) {
 			String v1 = graph.getEdgeSource(e);
 			minimalesGeruest.addVertex(v1);

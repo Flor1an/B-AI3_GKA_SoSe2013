@@ -18,11 +18,11 @@ public class GraphWriterTest {
 	public void testK7() {
 		AbstractBaseGraph<String, DefaultEdge> graph = new CompleteGraph<String, DefaultEdge>(DefaultEdge.class);
 		
-		for (int i = 1; i <= 25; i++) {
+		for (int i = 1; i <= 7; i++) {
 			graph.addVertex("v" + i);
 		}
 		
-		File file = new File("k25.gka");
+		File file = new File("fixture_graph.txt");
 		GraphWriter writer = new GraphWriter(graph);
 		try {
 			writer.writeToFile(file);

@@ -3,7 +3,6 @@ package aufgabe1;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Random;
 
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.graph.AbstractBaseGraph;
@@ -33,11 +32,10 @@ public class GraphWriter {
 	 */
 	public void writeToFile(File file) throws IOException {
 		FileWriter writer = new FileWriter(file);
-		writer.write(this.getDirectiveForGraph() + System.getProperty( "line.separator" ));
+		writer.write(this.getDirectiveForGraph() + "\n");
 		
 		for (DefaultEdge edge : this.graph.edgeSet()) {
-			Random r = new Random();
-			writer.write(this.graph.getEdgeSource(edge) + "," + this.graph.getEdgeTarget(edge)+","+ r.nextInt(100) +";"+ System.getProperty( "line.separator" ));
+			writer.write(this.graph.getEdgeSource(edge) + "," + this.graph.getEdgeTarget(edge) + ";\n");
 		}
 		
 		this.writeLoneVerticesToFile(writer);

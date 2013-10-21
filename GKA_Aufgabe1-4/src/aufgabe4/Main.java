@@ -28,20 +28,20 @@ public class Main {
 			MST mst = new MST(graph5);
 			System.out.println("MST: " + mst.getWegLaenge() + mst.finalPath);
 			
-			NNA nna = new NNA(graph5);
-			System.out.println("NNA: " + nna.getWegLaenge() + nna.finalPath);
+//			NNA nna = new NNA(graph5);
+//			System.out.println("NNA: " + nna.getWegLaenge() + nna.finalPath);
+//			
 			
-			
-			
-			System.out.println();
-			
-			graphK25 = (WeightedMultigraph<String, DefaultWeightedEdge>) reader.readFromFile(new File("K25.gka"));
-			
-			MST mstK25 = new MST(graphK25);
-			System.out.println("MST: " + mstK25.getWegLaenge() + mstK25.finalPath);
-			
-			NNA nnaK25 = new NNA(graphK25);
-			System.out.println("NNA: " + nnaK25.getWegLaenge() + nnaK25.finalPath);
+//			
+//			System.out.println();
+//			
+//			graphK25 = (WeightedMultigraph<String, DefaultWeightedEdge>) reader.readFromFile(new File("K25.gka"));
+//			
+//			MST mstK25 = new MST(graphK25);
+//			System.out.println("MST: " + mstK25.getWegLaenge() + mstK25.finalPath);
+//			
+//			NNA nnaK25 = new NNA(graphK25);
+//			System.out.println("NNA: " + nnaK25.getWegLaenge() + nnaK25.finalPath);
 
 
 		} catch (IOException e) {
